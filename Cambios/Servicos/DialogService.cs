@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Cambios.Servicos
 {
-    internal class DialogService
+    public class DialogService
     {
+        public void ShowMessage(string title, string message)
+        {
+            MessageBox.Show(message, title);
+        }
     }
 }

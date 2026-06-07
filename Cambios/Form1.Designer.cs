@@ -38,6 +38,7 @@
             LabelResultado = new Label();
             LabelStatus = new Label();
             ProgressBar = new ProgressBar();
+            ButtonTroca = new Button();
             SuspendLayout();
             // 
             // label1
@@ -95,19 +96,21 @@
             // 
             // ButtonConverter
             // 
+            ButtonConverter.Enabled = false;
             ButtonConverter.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            ButtonConverter.Location = new Point(512, 79);
+            ButtonConverter.Location = new Point(609, 75);
             ButtonConverter.Name = "ButtonConverter";
             ButtonConverter.Size = new Size(109, 40);
             ButtonConverter.TabIndex = 6;
             ButtonConverter.Text = "Converter";
             ButtonConverter.UseVisualStyleBackColor = true;
+            ButtonConverter.Click += ButtonConverter_Click;
             // 
             // LabelResultado
             // 
             LabelResultado.AutoSize = true;
             LabelResultado.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelResultado.Location = new Point(179, 9);
+            LabelResultado.Location = new Point(196, 208);
             LabelResultado.Name = "LabelResultado";
             LabelResultado.Size = new Size(353, 21);
             LabelResultado.TabIndex = 7;
@@ -117,7 +120,7 @@
             // 
             LabelStatus.AutoSize = true;
             LabelStatus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelStatus.Location = new Point(466, 187);
+            LabelStatus.Location = new Point(40, 253);
             LabelStatus.Name = "LabelStatus";
             LabelStatus.Size = new Size(57, 21);
             LabelStatus.TabIndex = 8;
@@ -125,16 +128,27 @@
             // 
             // ProgressBar
             // 
-            ProgressBar.Location = new Point(570, 187);
+            ProgressBar.Location = new Point(609, 253);
             ProgressBar.Name = "ProgressBar";
             ProgressBar.Size = new Size(137, 21);
             ProgressBar.TabIndex = 9;
+            // 
+            // ButtonTroca
+            // 
+            ButtonTroca.Enabled = false;
+            ButtonTroca.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            ButtonTroca.Location = new Point(632, 137);
+            ButtonTroca.Name = "ButtonTroca";
+            ButtonTroca.Size = new Size(86, 66);
+            ButtonTroca.TabIndex = 10;
+            ButtonTroca.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(744, 229);
+            ClientSize = new Size(802, 304);
+            Controls.Add(ButtonTroca);
             Controls.Add(ProgressBar);
             Controls.Add(LabelStatus);
             Controls.Add(LabelResultado);
@@ -163,5 +177,6 @@
         private Label LabelResultado;
         private Label LabelStatus;
         private ProgressBar ProgressBar;
+        private Button ButtonTroca;
     }
 }
