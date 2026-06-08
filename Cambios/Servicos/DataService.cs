@@ -75,10 +75,10 @@ namespace Cambios.Servicos
                 {
                     rates.Add(new Rate
                     {
-                        RateId = (int)reader["RateId"],
-                        Code = (string)reader["code"],
-                        Name = (string)reader["name"],
-                        TaxRate = (double)reader["TaxRate"]
+                        RateId = Convert.ToInt32( reader["RateId"]),
+                        Code = Convert.ToString(reader["code"]),
+                        Name = Convert.ToString(reader["name"]),
+                        TaxRate = Convert.ToDouble(reader["TaxRate"]),
                     });
                 }
                 connection.Close();

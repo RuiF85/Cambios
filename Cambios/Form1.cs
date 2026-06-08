@@ -10,7 +10,7 @@ namespace Cambios
     using System.Windows.Forms;
     using Modelos;
     using Cambios.Servicos;
-
+    using System.Net;
     public partial class Form1 : Form
     {
         #region Atributos
@@ -18,7 +18,6 @@ namespace Cambios
         private List<Rate> Rates;
 
         private NetworkService networkService;
-
         private ApiService apiService;
         private DialogService dialogService;
         private DataService dataService;
@@ -41,7 +40,7 @@ namespace Cambios
             bool load;
 
             LabelResultado.Text = "A atualizar taxas... ";
-            var connection = networkService.checkConnecion();
+            var connection = await networkService.CheckConnection();
 
             if (!connection.IsSuccess)
             {
